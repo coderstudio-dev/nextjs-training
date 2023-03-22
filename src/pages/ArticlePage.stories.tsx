@@ -6,6 +6,6 @@ export default {
   component: Article,
 } as ComponentMeta<typeof Article>;
 
-export const Homepage: ComponentStory<typeof Article> = (args) => (
+export const LandingPage: ComponentStory<typeof Article> = (args) => (
   <Article {...args} />
 );

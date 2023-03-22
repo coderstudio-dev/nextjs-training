@@ -6,6 +6,6 @@ export default {
   component: Author,
 } as ComponentMeta<typeof Author>;
 
-export const Homepage: ComponentStory<typeof Author> = (args) => (
+export const LandingPage: ComponentStory<typeof Author> = (args) => (
   <Author {...args} />
 );

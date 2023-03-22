@@ -6,6 +6,6 @@ export default {
   component: Home,
 } as ComponentMeta<typeof Home>;
 
-export const Homepage: ComponentStory<typeof Home> = (args) => (
+export const LandingPage: ComponentStory<typeof Home> = (args) => (
   <Home {...args} />
 );
