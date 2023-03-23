@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .btn-hover-outline {
+    @apply bg-indigo-600 text-white underline;
+  }
+
+  .btn-hover-transparent {
+    @apply rounded bg-indigo-100 text-indigo-600 underline;
+  }
+}
+
+@layer components {
+  .btn-default {
+    @apply py-2 px-4;
+  }
+
+  .btn-primary {
+    @apply rounded bg-indigo-600 text-white underline  hover:bg-indigo-800;
+  }
+
+  .btn-outline {
+    @apply rounded border border-indigo-600 bg-transparent text-indigo-600;
+  }
+}

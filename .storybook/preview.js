@@ -1,7 +1,4 @@
-// @ts-check
-import { RouterContext } from 'next/dist/shared/lib/router-context';
 import * as NextImage from 'next/image';
-//import { AuthProvider } from '../src/context/auth/AuthContext';
 import '../src/styles/globals.css';
 
 const BREAKPOINTS_INT = {
@@ -35,17 +32,9 @@ Object.defineProperty(NextImage, 'default', {
   configurable: true,
   value: (props) => <OriginalNextImage {...props} unoptimized />,
 });
-/*
-export const decorators = [
-  (Story) => (
-    <AuthProvider>
-      <Story />
-    </AuthProvider>
-  ),
-];
-*/
 
 export const parameters = {
+  layout: 'fullscreen',
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
@@ -54,8 +43,4 @@ export const parameters = {
     },
   },
   viewport: { viewports: customViewports },
-  layout: 'fullscreen',
-  nextRouter: {
-    Provider: RouterContext.Provider,
-  },
 };
