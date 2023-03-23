@@ -10,6 +10,10 @@
 const config = {
   reactStrictMode: true,
 
+  images: {
+    domains: ['dev.to', 'res.cloudinary.com'],
+  },
+
   /**
    * If you have the "experimental: { appDir: true }" setting enabled, then you
    * must comment the below `i18n` config out.
@@ -20,6 +24,6 @@ const config = {
     locales: ['en'],
     defaultLocale: 'en',
   },
-  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js', 'tsx'],
 };
 export default config;

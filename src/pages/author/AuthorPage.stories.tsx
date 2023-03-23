@@ -1,5 +1,5 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import Author from './author';
+import Author from './[author-id]';
 
 export default {
   title: 'Pages/Author',

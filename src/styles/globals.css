@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bodyColor;
+  }
+  h2 {
+    @apply text-1.5rem font-bold;
+  }
+  h1 {
+    @apply text-3rem font-extrabold !important;
+  }
+}
+
+@layer components {
+  .tag-badge {
+    @apply inline-block rounded-md border-1 border-transparent p-1 hover:border-lime-500  hover:bg-tagHover;
+  }
+  .card-border {
+    @apply mb-2 rounded-md bg-white shadow-cardShadow;
+  }
+}
