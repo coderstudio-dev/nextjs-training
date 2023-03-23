@@ -6,6 +6,8 @@ export default {
   component: Article,
 } as ComponentMeta<typeof Article>;
 
-export const LandingPage: ComponentStory<typeof Article> = (args) => (
+const LandingPage: ComponentStory<typeof Article> = (args) => (
   <Article {...args} />
 );
+
+export const Base = LandingPage.bind({});

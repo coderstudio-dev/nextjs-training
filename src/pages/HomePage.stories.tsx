@@ -6,6 +6,6 @@ export default {
   component: Home,
 } as ComponentMeta<typeof Home>;
 
-export const LandingPage: ComponentStory<typeof Home> = (args) => (
-  <Home {...args} />
-);
+const LandingPage: ComponentStory<typeof Home> = (args) => <Home {...args} />;
+
+export const Base = LandingPage.bind({});
