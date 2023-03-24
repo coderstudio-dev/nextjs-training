@@ -13,6 +13,14 @@
   .btn-hover-transparent {
     @apply rounded bg-indigo-100 text-indigo-600 underline;
   }
+
+  .text-muted {
+    @apply text-zinc-500;
+  }
+
+  .text-bold {
+    @apply font-bold;
+  }
 }
 
 @layer components {

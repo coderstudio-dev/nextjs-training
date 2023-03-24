@@ -43,7 +43,7 @@ const Header: React.FC<IHeader> = ({ isLoggedIn }) => {
         </button>
       </form> */}
       <div className="relative">
-        <input type="text" className="h-10 w-96 pl-2 rounded-lg z-0 border border-slate-300 focus:outline-2 outline-indigo-600 focus:border-none" placeholder="Search..." />
+        <input type="text" className="transition-all h-10 w-96 pl-2 rounded-lg z-0 border border-slate-300 focus:outline-2 outline-indigo-600 focus:border-none" placeholder="Search..." />
         <div className="absolute top-0 right-0">
           <Button content={<Image
             src="assets/search-icon.svg"
