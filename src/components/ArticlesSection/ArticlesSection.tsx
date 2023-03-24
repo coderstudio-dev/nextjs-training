@@ -4,6 +4,7 @@ import { useArticles } from '../../pages/api/hooks';
 
 import { type IArticleData } from '../../types';
 import ArticleCard from '../ArticleCard/ArticleCard';
+import Loading from '../LoadingContainer/Article/Loading';
 
 const ArticlesSection: React.FC<IArticlesSection> = ({}) => {
   const { articles, status } = useArticles();
@@ -11,7 +12,7 @@ const ArticlesSection: React.FC<IArticlesSection> = ({}) => {
   return (
     <div>
       {status === 'loading' ? (
-        <div>Loading</div>
+        <Loading />
       ) : (
         articles.map((article: IArticleData, index: number) => {
           if (index === 0) {
@@ -27,6 +28,7 @@ const ArticlesSection: React.FC<IArticlesSection> = ({}) => {
                 tags={article.tag_list}
                 title={article.title}
                 readingTime={article.reading_time_minutes}
+                reactionCount={article.public_reactions_count}
               />
             );
           }
@@ -42,6 +44,7 @@ const ArticlesSection: React.FC<IArticlesSection> = ({}) => {
               tags={article.tag_list}
               title={article.title}
               readingTime={article.reading_time_minutes}
+              reactionCount={article.public_reactions_count}
             />
           );
         })
