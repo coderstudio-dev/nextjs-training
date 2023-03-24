@@ -1,7 +1,7 @@
 import { type IHeader } from './Header';
 
 const base: IHeader = {
-  sampleTextProp: 'Hello world!',
+  isLoggedIn: false,
 };
 
 export const mockHeaderProps = {

@@ -14,9 +14,9 @@ const Template: ComponentStory<typeof Header> = (args) => (
   <Header {...args} />
 );
 
-export const Base = Template.bind({});
+export const Navbar = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 
-Base.args = {
+Navbar.args = {
   ...mockHeaderProps.base,
 } as IHeader;

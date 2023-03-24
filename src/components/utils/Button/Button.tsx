@@ -1,10 +1,18 @@
+import React, { type ReactNode } from "react";
+
 export interface IButton {
-  sampleTextProp: string;
+  content: ReactNode;
+  buttonType: string;
+  className?: string;
+  handleClick?: React.MouseEventHandler;
 }
 
-const Button: React.FC<IButton> = ({ sampleTextProp }) => {
+const Button: React.FC<IButton> = ({ content, buttonType, className, handleClick }) => {
+
+  // hover:btn-hover-transparent 
+
   return (
-    <button className="btn-default hover:btn-hover-transparent">{sampleTextProp}</button>
+    <button onClick={handleClick} className={`btn-default ${buttonType} ${className || ''}`}>{content}</button>
   );
 };
 
