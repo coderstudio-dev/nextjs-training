@@ -35,6 +35,14 @@ class ArticlesApi implements BaseApi {
 
     return articles;
   }
+
+  async getArticleByID(articleID: number) {
+    const { data: articles } = await apiGet<IArticleData>(
+      BASE_URL + `/${articleID}`
+    );
+
+    return articles;
+  }
 }
 
 export const api = new ArticlesApi();

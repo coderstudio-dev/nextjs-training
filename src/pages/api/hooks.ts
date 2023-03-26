@@ -43,3 +43,44 @@ export const useArticles = () => {
     retryRequest,
   };
 };
+
+export const useArticle = (articleID: number) => {
+  const [status, setStatus] = useState('idle');
+  const [article, setArticle] = useState<IArticleData>();
+  const [retry, setRetry] = useState(false);
+
+  type ISTATUS = {
+    status: number;
+  };
+
+  type IERROR = {
+    response: ISTATUS;
+  };
+
+  const retryRequest = useCallback(() => {
+    setRetry((prev) => !prev);
+  }, [setRetry]);
+
+  useEffect(() => {
+    setStatus('loading');
+
+    api
+      .getArticleByID(articleID)
+      .then((res) => {
+        setStatus('success');
+        setArticle(res);
+      })
+      .catch((error: IERROR) => {
+        const statusCode: number = error?.response?.status || 500;
+        const test: SetStateAction<string> =
+          statusCode.toString() as SetStateAction<string>;
+        setStatus(test);
+      });
+  }, [retry, articleID]);
+
+  return {
+    status,
+    article,
+    retryRequest,
+  };
+};

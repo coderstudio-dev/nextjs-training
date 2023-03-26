@@ -17,6 +17,7 @@ export interface IArticleData {
   readable_publish_date: string;
   slug: string;
   path: string;
+  url?: string;
   comments_count: number;
   public_reactions_count: number;
   collection_id: number;
@@ -32,7 +33,7 @@ export interface IArticleData {
   last_comment_at: string | null;
   reading_time_minutes: number;
   tag_list?: Array<string>;
-  tags?: string;
+  tags?: Array<string>;
   body_html: string;
   body_markdown: string;
   user: USER;
