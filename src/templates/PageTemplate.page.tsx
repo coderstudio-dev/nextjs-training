@@ -1,3 +1,6 @@
+import React from 'react';
+import Header from '../components/navigation/header/Header';
+
 export interface PageTemplateProps {
   children: React.ReactNode;
   type?: 'default' | 'logged-in';
@@ -11,9 +14,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
     case 'logged-in':
       return (
         <div className={`flex min-h-screen flex-col`}>
-          <div className=" bg-slate-500 bg-gray-700 py-5 text-center text-white">
-            <h1>INSERT HEADER</h1>{' '}
-          </div>
+          <Header isLoggedIn={true} />
           <div>{children}</div>
           <div className="m-auto" />
           <div className="bg-slate-500">
@@ -25,9 +26,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
 
   return (
     <div className={`flex min-h-screen flex-col`}>
-      <header className="sticky top-0 z-20 bg-red-300 px-6 py-3 text-red-900">
-        <h1>INSERT HEADER</h1>{' '}
-      </header>
+      <Header isLoggedIn={false} />
       <div>{children}</div>
       <div className="m-auto" />
       <div className="bg-slate-500">

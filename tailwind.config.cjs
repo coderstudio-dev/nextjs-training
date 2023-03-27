@@ -1,6 +1,9 @@
-/** @type {import('tailwindcss').Config} */
-const config = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+module.exports = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
+  ],
+  // Ensure these match with .storybook/preview.js
   theme: {
     extend: {
       screens: {
@@ -52,5 +55,3 @@ const config = {
   },
   plugins: [],
 };
-
-module.exports = config;

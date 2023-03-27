@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface ILoading {}
 
 const Loading: React.FC<ILoading> = ({}) => {

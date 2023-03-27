@@ -1,4 +1,5 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
+import React from 'react';
 import ArticlesSection, { type IArticlesSection } from './ArticlesSection';
 import { mockArticlesSectionProps } from './ArticlesSection.mock';
 

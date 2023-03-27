@@ -1,5 +1,6 @@
 export interface IArticlesSection {}
 
+import React from 'react';
 import { useArticles } from '../../pages/api/hooks';
 
 import { type IArticleData } from '../../types';
