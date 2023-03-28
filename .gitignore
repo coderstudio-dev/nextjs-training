@@ -43,3 +43,6 @@ yarn-error.log*
 
 #storybook build
 storybook-static/
+
+#storybook build log
+build-storybook.log
