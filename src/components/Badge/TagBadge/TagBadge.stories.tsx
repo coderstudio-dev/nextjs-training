@@ -3,7 +3,7 @@ import TagBadge, { type ITagBadge } from './TagBadge';
 import { mockTagBadgeProps } from './TagBadge.mock';
 
 export default {
-  title: 'Components/TagBadge',
+  title: 'Components/Badge/TagBadge',
   component: TagBadge,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},

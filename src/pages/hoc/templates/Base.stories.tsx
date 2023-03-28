@@ -1,30 +1,29 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import * as React from 'react';
-import PageTemplate from './PageTemplate.page';
+import Base from './Base.page';
 
 export default {
-  title: 'Templates/PageTemplate',
-  component: PageTemplate,
+  title: 'Templates/Base',
+  component: Base,
   parameters: {
     layout: 'fullscreen',
   },
-} as ComponentMeta<typeof PageTemplate>;
+} as ComponentMeta<typeof Base>;
 
-export interface PageTemplateProps {
+export interface BaseProps {
   children: React.ReactNode;
   type?: 'default' | 'logged-in';
 }
 
-const DummyComponent: React.FC<PageTemplateProps> = ({ children }) => (
+const DummyComponent: React.FC<BaseProps> = ({ children }) => (
   <div style={{ padding: 60 }}>{children}</div>
 );
 
-const Template: ComponentStory<typeof PageTemplate> = (args) => (
-  <PageTemplate {...args} />
-);
+const Template: ComponentStory<typeof Base> = (args) => <Base {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
+  isLoggedIn: false,
   children: (
     <DummyComponent>
       <div>Default template with scrollable header and navigation items</div>
@@ -36,7 +35,7 @@ Default.args = {
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {
-  type: 'logged-in',
+  isLoggedIn: true,
   children: (
     <DummyComponent>
       <div>Default template with scrollable header and navigation items</div>

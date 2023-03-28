@@ -1,10 +1,9 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import React from 'react';
 import ArticlesSection, { type IArticlesSection } from './ArticlesSection';
 import { mockArticlesSectionProps } from './ArticlesSection.mock';
 
 export default {
-  title: 'AppComponents/ArticlesSection',
+  title: 'Pages/Article/ArticlesSection',
   component: ArticlesSection,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},

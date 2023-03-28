@@ -4,8 +4,6 @@ module.exports = {
     '../src/components/**/*.stories.@(js|jsx|ts|tsx)',
     '../src/pages/**/*.stories.mdx',
     '../src/pages/**/*.stories.@(js|jsx|ts|tsx)',
-    '../src/templates/**/*.stories.mdx',
-    '../src/templates/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   /** Expose public folder to storybook as static */
   staticDirs: ['../public'],

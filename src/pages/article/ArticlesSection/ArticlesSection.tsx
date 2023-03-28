@@ -1,11 +1,11 @@
 export interface IArticlesSection {}
 
 import React from 'react';
-import { useArticles } from '../../pages/api/hooks';
+import { useArticles } from '../../api/hooks';
 
-import { type IArticleData } from '../../types';
-import ArticleCard from '../ArticleCard/ArticleCard';
-import Loading from '../LoadingContainer/Article/Loading';
+import ArticleCard from '../../../components/Block/ArticleBlock/ArticleBlock';
+import Loading from '../../../components/LoadingContainer/Article/Loading';
+import { type IArticleData } from '../../../types';
 
 const ArticlesSection: React.FC<IArticlesSection> = ({}) => {
   const { articles, status } = useArticles();
@@ -20,6 +20,8 @@ const ArticlesSection: React.FC<IArticlesSection> = ({}) => {
             return (
               <ArticleCard
                 key={index}
+                id={article.id}
+                slug={article.slug}
                 isFeatured={true}
                 isMainArticle={false}
                 author={article.user.name}
@@ -36,6 +38,8 @@ const ArticlesSection: React.FC<IArticlesSection> = ({}) => {
           return (
             <ArticleCard
               key={index}
+              id={article.id}
+              slug={article.slug}
               isFeatured={false}
               isMainArticle={false}
               author={article.user.name}

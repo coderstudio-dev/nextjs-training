@@ -1,15 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import Button from '../../utils/Button/Button';
+import Button from '../Button/Button';
 
-export interface IHeader {
+export interface IHeader extends React.ComponentPropsWithRef<'header'> {
   isLoggedIn: boolean;
 }
 
-const Header: React.FC<IHeader> = ({ isLoggedIn }) => {
+const Header: React.FC<IHeader> = ({ ...headerProps }) => {
   return (
-    <header className="-full sticky top-0 z-10 flex flex-row justify-between border-b-2 border-slate-100 bg-white">
+    <header
+      {...headerProps}
+      className="-full sticky top-0 z-10 flex flex-row justify-between border-b-2 border-slate-100 bg-white"
+    >
       <div className="m-2 flex justify-center space-x-2">
         <Button
           content={
@@ -58,7 +61,7 @@ const Header: React.FC<IHeader> = ({ isLoggedIn }) => {
             <Button
               content={
                 <Image
-                  src="assets/search-icon.svg"
+                  src="/assets/search-icon.svg"
                   alt="Logo"
                   width={25}
                   height={25}
@@ -74,7 +77,7 @@ const Header: React.FC<IHeader> = ({ isLoggedIn }) => {
         <Button
           content={
             <Image
-              src="assets/search-icon.svg"
+              src="/assets/search-icon.svg"
               alt="Logo"
               width={25}
               height={25}

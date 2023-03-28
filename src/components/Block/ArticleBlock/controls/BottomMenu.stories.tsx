@@ -3,7 +3,7 @@ import BottomMenu, { type IBottomMenu } from './BottomMenu';
 import { mockBottomMenuProps } from './BottomMenu.mock';
 
 export default {
-  title: 'Components/ArticleCard/BottomMenu',
+  title: 'Components/Block/ArticleBlock/BottomMenu',
   component: BottomMenu,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},

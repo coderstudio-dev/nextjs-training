@@ -1,19 +1,19 @@
-import { type Session } from 'next-auth';
-import { SessionProvider } from 'next-auth/react';
-import { type AppType } from 'next/app';
-import React from 'react';
+import { type AppProps } from 'next/app';
+import { AuthProvider } from '../context/auth/AuthContext';
+import type { NextPageWithLayout } from './page';
 
 import '../styles/globals.css';
 
-const MyApp: AppType<{ session: Session | null }> = ({
+interface AppPropsWithLayout extends AppProps {
+  Component: NextPageWithLayout;
+}
+
+function MyApp({
   Component,
-  pageProps: { session, ...pageProps },
-}) => {
-  return (
-    <SessionProvider session={session}>
-      <Component {...pageProps} />
-    </SessionProvider>
-  );
-};
+  pageProps: { /*session,*/ ...pageProps },
+}: AppPropsWithLayout) {
+  const getLayout = Component.getLayout || ((page) => page);
+  return <AuthProvider>{getLayout(<Component {...pageProps} />)}</AuthProvider>;
+}
 
 export default MyApp;

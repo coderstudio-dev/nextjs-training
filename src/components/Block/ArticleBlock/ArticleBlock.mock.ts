@@ -1,4 +1,4 @@
-import { type IPostOverviewCard } from './ArticleCard';
+import { type IPostOverviewCard } from './ArticleBlock';
 
 const base: IPostOverviewCard = {
   title: 'How to Get Your First Job as a Self-Taught Programmer',
@@ -11,10 +11,11 @@ const base: IPostOverviewCard = {
   profileImage: 'https://i.pravatar.cc/40?img=3',
   tags: ['devdiscuss', 'ai', 'machinelearning', 'chatgpt'],
   date: '2023-03-09T09:20:56.000+00:00',
-
+  id: 1416664,
+  slug: 'meme-monday-cbo',
   reactionCount: 4,
 };
 
-export const mockArticleCardProps = {
+export const mockArticleBlockProps = {
   base,
 };

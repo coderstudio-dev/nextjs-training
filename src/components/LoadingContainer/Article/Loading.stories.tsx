@@ -3,7 +3,7 @@ import Loading, { type ILoading } from './Loading';
 import { mockLoadingProps } from './Loading.mock';
 
 export default {
-  title: 'components/loadingSkeleton',
+  title: 'components/LoadingSkeleton',
   component: Loading,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},

@@ -6,8 +6,6 @@ export default {
   component: Author,
 } as ComponentMeta<typeof Author>;
 
-const LandingPage: ComponentStory<typeof Author> = (args) => (
-  <Author {...args} />
-);
+const LandingPage: ComponentStory<typeof Author> = (args) => <Author />;
 
 export const Base = LandingPage.bind({});

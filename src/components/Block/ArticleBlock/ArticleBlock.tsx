@@ -1,11 +1,13 @@
 import moment from 'moment';
 import Image from 'next/image';
 import Link from 'next/link';
-import TagBadge from '../TagBadge/TagBadge';
+import TagBadge from '../../Badge/TagBadge/TagBadge';
 import BottomMenu from './controls/BottomMenu';
 
 export interface IPostOverviewCard {
   featureImage: string | null;
+  id: number;
+  slug: string;
   isFeatured: boolean;
   isMainArticle: boolean;
   body?: string;
@@ -18,8 +20,9 @@ export interface IPostOverviewCard {
   reactionCount: number;
 }
 
-const ArticleCard: React.FC<IPostOverviewCard> = ({
+const ArticleBlock: React.FC<IPostOverviewCard> = ({
   featureImage,
+  id,
   isFeatured = true,
   isMainArticle = false,
   profileImage,
@@ -39,7 +42,7 @@ const ArticleCard: React.FC<IPostOverviewCard> = ({
     >
       {featureImage && isFeatured ? (
         <div className="relative aspect-auto650/273">
-          <Link href="/">
+          <Link href={`/article/${id}`}>
             <Image
               src={featureImage}
               alt="card__image"
@@ -77,7 +80,7 @@ const ArticleCard: React.FC<IPostOverviewCard> = ({
             <h1 className="">{title}</h1>
           ) : (
             <h2 className="">
-              <Link className="flex hover:text-hover" href="/">
+              <Link className="flex hover:text-hover" href={`/article/${id}`}>
                 {title}
               </Link>
             </h2>
@@ -108,4 +111,4 @@ const ArticleCard: React.FC<IPostOverviewCard> = ({
   );
 };
 
-export default ArticleCard;
+export default ArticleBlock;

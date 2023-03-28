@@ -1,5 +1,4 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import React from 'react';
 import Article from './[article-id].page';
 
 export default {
@@ -7,9 +6,7 @@ export default {
   component: Article,
 } as ComponentMeta<typeof Article>;
 
-const LandingPage: ComponentStory<typeof Article> = (args) => (
-  <Article {...args} />
-);
+const LandingPage: ComponentStory<typeof Article> = () => <Article />;
 
 export const Base = LandingPage.bind({});
 
