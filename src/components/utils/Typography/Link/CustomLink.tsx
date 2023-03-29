@@ -9,7 +9,7 @@ export interface ICustomLink {
 
 const CustomLink: React.FC<ICustomLink> = ({ url, content, className }) => {
   return (
-    <Link className={`text-indigo-400 hover:text-indigo-800 ${className || ''}`} href={url}>{content}</Link>
+    <Link className={`text-indigo-600 hover:text-indigo-950 ${className || ''}`} href={url}>{content}</Link>
   );
 };
 

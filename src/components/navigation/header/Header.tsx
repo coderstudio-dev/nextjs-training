@@ -45,8 +45,15 @@ const Header: React.FC<IHeader> = ({ isLoggedIn }) => {
         width={25}
         height={25}
       />} buttonType="btn-transparent" className="hidden max-md:block" />
-      <Button content="Log in" buttonType="btn-transparent" />
-      <Button content="Create Account" buttonType="btn-outline" className='max-md:hidden' />
+      {
+        isLoggedIn ? (<Button content="Sign Out" buttonType="btn-transparent" />) : (
+          <>
+            <Button content="Log in" buttonType="btn-transparent" />
+            <Button content="Create Account" buttonType="btn-outline" className='max-md:hidden' />
+          </>
+        )
+      }
+
     </div>
   </header>;
 };

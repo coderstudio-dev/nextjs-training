@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../../components/Footer/Footer';
 import Header from '../../../components/Header/Header';
 
 export interface BaseProps {
@@ -12,9 +13,7 @@ const Base: React.FC<BaseProps> = ({ isLoggedIn, children }) => {
       <Header isLoggedIn={isLoggedIn} />
       <div className="mt-2">{children}</div>
       <div className="m-auto" />
-      <div className="bg-slate-500">
-        <h1>INSERT FOOTER</h1>
-      </div>
+      <Footer />
     </div>
   );
 };
