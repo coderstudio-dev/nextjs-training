@@ -1,7 +1,7 @@
 import { type IFooter } from './Footer';
 
 const base: IFooter = {
-  sampleTextProp: 'Hello World',
+  footerContent: '',
 };
 
 export const mockFooterProps = {

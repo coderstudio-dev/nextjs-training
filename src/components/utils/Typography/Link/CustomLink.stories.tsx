@@ -3,7 +3,7 @@ import CustomLink, { type ICustomLink } from './CustomLink';
 import { mockCustomLinkProps } from './CustomLink.mock';
 
 export default {
-  title: 'Link/CustomLink',
+  title: 'Utils/Typography/CustomLink',
   component: CustomLink,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
@@ -14,8 +14,8 @@ const Template: ComponentStory<typeof CustomLink> = (args) => (
   <CustomLink {...args} />
 );
 
-export const Base = Template.bind({});
+export const Link = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Base.args = {
+Link.args = {
   ...mockCustomLinkProps.base,
 } as ICustomLink;

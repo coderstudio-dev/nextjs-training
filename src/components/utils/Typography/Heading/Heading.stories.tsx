@@ -3,7 +3,7 @@ import Heading, { type IHeading } from './Heading';
 import { mockHeadingProps } from './Heading.mock';
 
 export default {
-  title: 'Typography/Heading',
+  title: 'Utils/Typography/Heading',
   component: Heading,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
