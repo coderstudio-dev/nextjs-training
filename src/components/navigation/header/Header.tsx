@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Button from "../../utils/Button/Button";
+import Button from "../../Button/Button";
 
 export interface IHeader {
   isLoggedIn: boolean;
