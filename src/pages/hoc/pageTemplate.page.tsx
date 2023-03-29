@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Menu from '../../components/Menu/Menu';
 import AuthContext from '../../context/auth/AuthContext';
 import Base from './templates/Base.page';
 
@@ -41,7 +42,7 @@ const PageTemplate = (
       <Base isLoggedIn={authenticated}>
         <div className="flex justify-center space-x-0 mdtb:space-x-4">
           <div className="hidden h-auto w-64 flex-none space-y-4 mdtb:inline">
-            <div>menu</div>
+            <Menu />
           </div>
           <div className="w-m h-auto max-w-2xl flex-auto space-y-4 mdtb:m-0">
             <MainComponent />

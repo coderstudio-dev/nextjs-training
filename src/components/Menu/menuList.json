@@ -1,0 +1,74 @@
+[
+  {
+    "url": "/",
+    "title": "Home",
+    "category": "Main",
+    "assetUrl": "/assets/home-icon.svg"
+  },
+  {
+    "url": "/",
+    "title": "Reading List",
+    "category": "Main",
+    "assetUrl": "/assets/readingList-icon.svg"
+  },
+  {
+    "url": "/",
+    "title": "Listing",
+    "category": "Main",
+    "assetUrl": "/assets/listing-icon.svg"
+  },
+  {
+    "url": "/",
+    "title": "Code of Conduct",
+    "category": "Others",
+    "assetUrl": "/assets/coc-icon.svg"
+  },
+  {
+    "url": "/",
+    "title": "Privacy Policy",
+    "category": "Others",
+    "assetUrl": "/assets/privacy-icon.svg"
+  },
+  {
+    "url": "/",
+    "title": "Terms of Use",
+    "category": "Others",
+    "assetUrl": "/assets/terms-icon.svg"
+  },
+  {
+    "url": "https://twitter.com/thepracticaldev",
+    "title": "Twitter",
+    "category": "Bottom",
+    "assetUrl": "/assets/twitter-icon.svg"
+  },
+  {
+    "url": "https://twitter.com/thepracticaldev",
+    "title": "Facebook",
+    "category": "Bottom",
+    "assetUrl": "/assets/facebook-icon.svg"
+  },
+  {
+    "url": "https://twitter.com/thepracticaldev",
+    "title": "Discord",
+    "category": "Bottom",
+    "assetUrl": "/assets/discord-icon.svg"
+  },
+  {
+    "url": "https://twitter.com/thepracticaldev",
+    "title": "Instagram",
+    "category": "Bottom",
+    "assetUrl": "/assets/instagram-icon.svg"
+  },
+  {
+    "url": "https://twitter.com/thepracticaldev",
+    "title": "Twitch",
+    "category": "Bottom",
+    "assetUrl": "/assets/twitch-icon.svg"
+  },
+  {
+    "url": "https://twitter.com/thepracticaldev",
+    "title": "Mastodon",
+    "category": "Bottom",
+    "assetUrl": "/assets/mastodon-icon.svg"
+  }
+]
