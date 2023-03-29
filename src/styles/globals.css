@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-bodyColor;
+  }
+  h2 {
+    @apply text-1.5rem font-bold;
+  }
+  h1 {
+    @apply text-3rem font-extrabold !important;
+  }
+}
+
 @layer utilities {
   .btn-hover-primary {
     @apply bg-indigo-800 underline;
@@ -24,6 +36,13 @@
 }
 
 @layer components {
+  .tag-badge {
+    @apply inline-block rounded-md border-1 border-transparent p-1 hover:border-lime-500  hover:bg-tagHover;
+  }
+  .card-border {
+    @apply mb-2 rounded-md bg-white shadow-cardShadow;
+  }
+  
   .btn-default {
     @apply py-2 px-4;
   }

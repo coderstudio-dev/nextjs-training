@@ -1,5 +1,10 @@
 module.exports = {
-  stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: [
+    '../src/components/**/*.stories.mdx',
+    '../src/components/**/*.stories.@(js|jsx|ts|tsx)',
+    '../src/pages/**/*.stories.mdx',
+    '../src/pages/**/*.stories.@(js|jsx|ts|tsx)',
+  ],
   /** Expose public folder to storybook as static */
   staticDirs: ['../public'],
   addons: [
@@ -7,6 +12,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
     'storybook-css-modules-preset',
+    'storybook-addon-next-router',
     {
       /**
        * Fix Storybook issue with PostCSS@8

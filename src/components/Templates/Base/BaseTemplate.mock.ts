@@ -1,7 +1,7 @@
 import { type IBaseTemplate } from './BaseTemplate';
 
 const base: IBaseTemplate = {
-  sampleTextProp: 'Hello World',
+  sampleTextProp: 'For Developers use only',
 };
 
 export const mockBaseTemplateProps = {
