@@ -3,19 +3,17 @@ import Link from 'next/link';
 import { useState } from 'react';
 import menuList from './menuList.json';
 
-export interface IMenu {}
-
-const Menu = ({}: IMenu) => {
+const Menu = () => {
   const [menu] = useState(menuList);
 
   return (
     <div className="w-64">
       {menu &&
-        menu.map((menulist, idx) => {
+        menu.map((menulist) => {
           if (menulist.category === 'Main') {
             return (
               <Link
-                key={idx}
+                key={`${menulist.title}`}
                 className="flex p-3 hover:bg-hoverTrans50 hover:underline"
                 href={menulist.url}
               >
@@ -35,11 +33,11 @@ const Menu = ({}: IMenu) => {
       <div className="p-3 font-bold">Other</div>
 
       {menu &&
-        menu.map((menulist, idx) => {
+        menu.map((menulist) => {
           if (menulist.category === 'Others') {
             return (
               <Link
-                key={idx}
+                key={`${menulist.title}`}
                 className="flex p-3 hover:bg-hoverTrans50 hover:underline"
                 href={menulist.url}
               >
@@ -59,11 +57,11 @@ const Menu = ({}: IMenu) => {
 
       <div className="flex justify-start pt-4">
         {menu &&
-          menu.map((menulist, idx) => {
+          menu.map((menulist) => {
             if (menulist.category === 'Bottom') {
               return (
                 <Link
-                  key={idx}
+                  key={`${menulist.title}`}
                   href={menulist.url}
                   className="p-2  hover:bg-hoverTrans50"
                   target="_blank"

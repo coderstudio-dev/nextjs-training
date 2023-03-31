@@ -87,8 +87,8 @@ const ArticleBlock = ({
           )}
 
           <div className="mb-6">
-            {tags?.map((tag, idx) => {
-              return <TagBadge tagName={tag} key={idx} />;
+            {tags?.map((tag) => {
+              return <TagBadge tagName={tag} key={`${tag}`} />;
             })}
           </div>
 

@@ -1,12 +1,10 @@
-export interface IArticlesSection {}
-
 import { useArticles } from '../../api/hooks';
 
 import ArticleCard from '../../../components/Block/ArticleBlock/ArticleBlock';
 import Loading from '../../../components/LoadingContainer/Article/Loading';
 import { type IArticleData } from '../../../types';
 
-const ArticlesSection = ({}: IArticlesSection) => {
+const ArticlesSection = () => {
   const { articles, status } = useArticles();
 
   return (
@@ -18,7 +16,7 @@ const ArticlesSection = ({}: IArticlesSection) => {
           if (index === 0) {
             return (
               <ArticleCard
-                key={index}
+                key={article.id}
                 id={article.id}
                 slug={article.slug}
                 isFeatured={true}
@@ -36,7 +34,7 @@ const ArticlesSection = ({}: IArticlesSection) => {
           }
           return (
             <ArticleCard
-              key={index}
+              key={article.id}
               id={article.id}
               slug={article.slug}
               isFeatured={false}

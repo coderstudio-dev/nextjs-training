@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useCallback, useMemo, useState } from 'react';
 
 interface IAuthContext {
   authenticated: boolean;
@@ -22,11 +22,17 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
   const [authenticated, setAuthenticated] = useState(
     defaultValue.authenticated
   );
-  const login = () => setAuthenticated(true);
-  const logOut = () => setAuthenticated(false);
+
+  const login = useCallback(() => setAuthenticated(true), []);
+  const logOut = useCallback(() => setAuthenticated(false), []);
+
+  const fireBaseProviderValue = useMemo(
+    () => ({ authenticated, login, logOut }),
+    [authenticated, login, logOut]
+  );
 
   return (
-    <AuthContext.Provider value={{ authenticated, login, logOut }}>
+    <AuthContext.Provider value={fireBaseProviderValue}>
       {children}
     </AuthContext.Provider>
   );

@@ -10,6 +10,7 @@
     "aaron-bond.better-comments",
     "redhat.vscode-yaml",
     "bradlc.vscode-tailwindcss",
-    "austenc.tailwind-docs"
+    "austenc.tailwind-docs",
+    "SonarSource.sonarlint-vscode"
   ]
 }

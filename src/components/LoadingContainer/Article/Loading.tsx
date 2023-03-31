@@ -1,6 +1,4 @@
-export interface ILoading {}
-
-const Loading = ({}: ILoading) => {
+const Loading = () => {
   return (
     <div className={`${'max-w-675'} card-border mb-4`}>
       <div role="status" className="animate-pulse">

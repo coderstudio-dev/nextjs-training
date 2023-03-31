@@ -89,7 +89,7 @@ const Footer = ({ footerContent }: IFooter) => {
       <ul className="mt-2 flex flex-wrap justify-center gap-2">
         {footerLinks.map((footerLink, idx) => {
           return (
-            <li className="flex items-center" key={idx}>
+            <li className="flex items-center" key={`${footerLink.text}`}>
               <CustomLink
                 url={footerLink.url}
                 content={footerLink.text}
@@ -103,7 +103,7 @@ const Footer = ({ footerContent }: IFooter) => {
       <ul className="mt-2 flex flex-wrap justify-center gap-2">
         {footerLinks2.map((footerLink, idx) => {
           return (
-            <li className="flex items-center" key={idx}>
+            <li className="flex items-center" key={`${footerLink.text}`}>
               <CustomLink
                 url={footerLink.url}
                 content={footerLink.text}
