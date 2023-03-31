@@ -1,13 +1,12 @@
 export interface IArticlesSection {}
 
-import React from 'react';
 import { useArticles } from '../../api/hooks';
 
 import ArticleCard from '../../../components/Block/ArticleBlock/ArticleBlock';
 import Loading from '../../../components/LoadingContainer/Article/Loading';
 import { type IArticleData } from '../../../types';
 
-const ArticlesSection: React.FC<IArticlesSection> = ({}) => {
+const ArticlesSection = ({}: IArticlesSection) => {
   const { articles, status } = useArticles();
 
   return (

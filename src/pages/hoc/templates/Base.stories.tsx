@@ -15,7 +15,7 @@ export interface BaseProps {
   type?: 'default' | 'logged-in';
 }
 
-const DummyComponent: React.FC<BaseProps> = ({ children }) => (
+const DummyComponent = ({ children }: BaseProps) => (
   <div style={{ padding: 60 }}>{children}</div>
 );
 

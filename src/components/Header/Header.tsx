@@ -7,14 +7,10 @@ export interface IHeader extends React.ComponentPropsWithRef<'header'> {
   isLoggedIn: boolean;
 }
 
-const Header: React.FC<IHeader> = ({ ...headerProps }) => {
-
+const Header = ({ ...headerProps }: IHeader) => {
   return (
-    <header
-      {...headerProps}
-      className=" bg-white"
-    >
-      <div className="container mx-auto w-full sticky top-0 z-10 flex flex-row justify-between border-b-2 border-slate-100">
+    <header {...headerProps} className=" bg-white">
+      <div className="container sticky top-0 z-10 mx-auto flex w-full flex-row justify-between border-b-2 border-slate-100">
         <div className="m-2 flex justify-center space-x-2">
           <Button
             content={
@@ -26,7 +22,7 @@ const Header: React.FC<IHeader> = ({ ...headerProps }) => {
               />
             }
             buttonType="btn-transparent"
-            className="hidden max-md:block p-1"
+            className="hidden p-1 max-md:block"
           />
           <Link href="/">
             <Image
@@ -69,9 +65,13 @@ const Header: React.FC<IHeader> = ({ ...headerProps }) => {
               />
             }
             buttonType="btn-transparent"
-            className="hidden max-md:block p-1"
+            className="hidden p-1 max-md:block"
           />
-          <Button className="max-md:hidden" content="Log in" buttonType="btn-transparent" />
+          <Button
+            className="max-md:hidden"
+            content="Log in"
+            buttonType="btn-transparent"
+          />
           <Button
             content="Create Account"
             buttonType="btn-outline"

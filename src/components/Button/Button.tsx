@@ -1,4 +1,4 @@
-import React, { type ReactNode } from "react";
+import React, { type ReactNode } from 'react';
 
 export interface IButton {
   content: ReactNode;
@@ -7,12 +7,16 @@ export interface IButton {
   handleClick?: React.MouseEventHandler;
 }
 
-const Button: React.FC<IButton> = ({ content, buttonType, className, handleClick }) => {
-
-  // hover:btn-hover-transparent 
+const Button = ({ content, buttonType, className, handleClick }: IButton) => {
+  // hover:btn-hover-transparent
 
   return (
-    <button onClick={handleClick} className={`btn-default ${buttonType} ${className || ''}`}>{content}</button>
+    <button
+      onClick={handleClick}
+      className={`btn-default ${buttonType} ${className || ''}`}
+    >
+      {content}
+    </button>
   );
 };
 

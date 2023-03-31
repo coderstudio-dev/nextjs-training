@@ -5,7 +5,7 @@ import menuList from './menuList.json';
 
 export interface IMenu {}
 
-const Menu: React.FC<IMenu> = ({}) => {
+const Menu = ({}: IMenu) => {
   const [menu] = useState(menuList);
 
   return (

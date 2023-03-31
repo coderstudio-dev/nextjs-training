@@ -1,8 +1,6 @@
-import React from 'react';
-
 export interface ILoading {}
 
-const Loading: React.FC<ILoading> = ({}) => {
+const Loading = ({}: ILoading) => {
   return (
     <div className={`${'max-w-675'} card-border mb-4`}>
       <div role="status" className="animate-pulse">

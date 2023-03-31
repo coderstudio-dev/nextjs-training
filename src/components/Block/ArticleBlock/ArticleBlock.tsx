@@ -20,7 +20,7 @@ export interface IPostOverviewCard {
   reactionCount: number;
 }
 
-const ArticleBlock: React.FC<IPostOverviewCard> = ({
+const ArticleBlock = ({
   featureImage,
   id,
   isFeatured = true,
@@ -33,7 +33,7 @@ const ArticleBlock: React.FC<IPostOverviewCard> = ({
   tags,
   readingTime,
   reactionCount,
-}) => {
+}: IPostOverviewCard) => {
   return (
     <div
       className={`${

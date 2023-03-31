@@ -2,7 +2,7 @@ export interface IHeading {
   sampleTextProp: string;
 }
 
-const Heading: React.FC<IHeading> = ({ sampleTextProp }) => {
+const Heading = ({ sampleTextProp }: IHeading) => {
   return (
     <div className="bg-gradient-to-r from-cyan-500 to-blue-500">
       {sampleTextProp}

@@ -4,7 +4,7 @@ export interface ITagBadge {
   tagName: string;
 }
 
-const TagBadge: React.FC<ITagBadge> = ({ tagName }) => {
+const TagBadge = ({ tagName }: ITagBadge) => {
   return (
     <Link target="_blank" className="tag-badge" href="/">
       #{tagName}

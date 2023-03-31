@@ -5,10 +5,7 @@ export interface IBottomMenu {
   reactionCount: number;
 }
 
-const BottomMenu: React.FC<IBottomMenu> = ({
-  readingTime,
-  reactionCount = 0,
-}) => {
+const BottomMenu = ({ readingTime, reactionCount = 0 }: IBottomMenu) => {
   return (
     <div className="flex items-center justify-between">
       <div className="flex items-start">

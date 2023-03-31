@@ -18,7 +18,7 @@ const defaultValue: IAuthContext = {
 
 const AuthContext = createContext<IAuthContext>(defaultValue);
 
-export const AuthProvider: React.FC<IAuthProvider> = ({ children }) => {
+export const AuthProvider = ({ children }: IAuthProvider) => {
   const [authenticated, setAuthenticated] = useState(
     defaultValue.authenticated
   );

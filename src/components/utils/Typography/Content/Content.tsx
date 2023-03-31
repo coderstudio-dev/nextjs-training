@@ -1,4 +1,4 @@
-import { type ReactNode } from "react";
+import { type ReactNode } from 'react';
 
 export interface IContent {
   content?: ReactNode;
@@ -6,10 +6,8 @@ export interface IContent {
   className?: string;
 }
 
-const Content: React.FC<IContent> = ({ content, textType, className }) => {
-  return (
-    <p className={`${textType || ''} ${className || ''}`}>{content}</p>
-  );
+const Content = ({ content, textType, className }: IContent) => {
+  return <p className={`${textType || ''} ${className || ''}`}>{content}</p>;
 };
 
 export default Content;
