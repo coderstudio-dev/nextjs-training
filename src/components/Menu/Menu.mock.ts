@@ -1,6 +1,4 @@
-import { type IMenu } from './Menu';
-
-const base: IMenu = {};
+const base = {};
 
 export const mockMenuProps = {
   base,

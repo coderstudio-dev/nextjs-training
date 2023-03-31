@@ -1,5 +1,5 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import Loading, { type ILoading } from './Loading';
+import Loading from './Loading';
 import { mockLoadingProps } from './Loading.mock';
 
 export default {
@@ -14,12 +14,10 @@ export default {
 } as ComponentMeta<typeof Loading>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Loading> = (args) => (
-  <Loading {...args} />
-);
+const Template: ComponentStory<typeof Loading> = (args) => <Loading />;
 
 export const Base = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Base.args = {
   ...mockLoadingProps.base,
-} as ILoading;
+};

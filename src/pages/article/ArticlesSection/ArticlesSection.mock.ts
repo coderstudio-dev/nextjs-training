@@ -1,6 +1,4 @@
-import { type IArticlesSection } from './ArticlesSection';
-
-const base: IArticlesSection = {
+const base = {
   articleID: 1370571,
 };
 

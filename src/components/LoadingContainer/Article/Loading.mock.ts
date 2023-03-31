@@ -1,6 +1,4 @@
-import { type ILoading } from './Loading';
-
-const base: ILoading = {};
+const base = {};
 
 export const mockLoadingProps = {
   base,

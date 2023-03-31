@@ -1,5 +1,5 @@
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import ArticlesSection, { type IArticlesSection } from './ArticlesSection';
+import ArticlesSection from './ArticlesSection';
 import { mockArticlesSectionProps } from './ArticlesSection.mock';
 
 export default {
@@ -15,11 +15,11 @@ export default {
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof ArticlesSection> = (args) => (
-  <ArticlesSection {...args} />
+  <ArticlesSection />
 );
 
 export const Base = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Base.args = {
   ...mockArticlesSectionProps.base,
-} as IArticlesSection;
+};
