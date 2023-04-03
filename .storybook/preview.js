@@ -20,7 +20,7 @@ const BREAKPOINTS_INT = {
 };
 
 const customViewports = Object.fromEntries(
-  Object.entries(BREAKPOINTS_INT).map(([key, val], idx) => {
+  Object.entries(BREAKPOINTS_INT).map(([key, val], index) => {
     console.log(val);
     return [
       key,
@@ -28,7 +28,7 @@ const customViewports = Object.fromEntries(
         name: key,
         styles: {
           width: `${val}px`,
-          height: `${(idx + 5) * 10}vh`,
+          height: `${(index + 5) * 10}vh`,
         },
       },
     ];

@@ -81,7 +81,7 @@ const Footer = ({ footerContent }: IFooter) => {
         <CustomLink url="#" className='font-semibold' content="DEV Community " titleLink /> — A constructive and inclusive social network for software developers. With you every step of your journey.
       </p>
       <ul className="mt-2 flex flex-wrap justify-center gap-2">
-        {footerLinks.map((footerLink, idx) => {
+        {footerLinks.map((footerLink, index) => {
           return (
             <li className="flex items-center" key={`${footerLink.text}`}>
               <CustomLink
@@ -89,13 +89,13 @@ const Footer = ({ footerContent }: IFooter) => {
                 content={footerLink.text}
                 className="px-2"
               />
-              {idx !== footerLinks.length - 1 && '•'}
+              {index !== footerLinks.length - 1 && '•'}
             </li>
           );
         })}
       </ul>
       <ul className="mt-2 flex flex-wrap justify-center gap-2">
-        {footerLinks2.map((footerLink, idx) => {
+        {footerLinks2.map((footerLink, index) => {
           return (
             <li className="flex items-center" key={`${footerLink.text}`}>
               <CustomLink
@@ -103,7 +103,7 @@ const Footer = ({ footerContent }: IFooter) => {
                 content={footerLink.text}
                 className="px-2 first:list-none max-md:list-none"
               />
-              {idx !== footerLinks2.length - 1 && '•'}
+              {index !== footerLinks2.length - 1 && '•'}
             </li>
           );
         })}

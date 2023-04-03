@@ -76,8 +76,8 @@ const Author: NextPage = () => {
             <p className='text-lg mb-4'>Top Rated Freelancer || Blogger || Cross-Platform App Developer || Web Developer || Open Source Contributor</p>
             <div className='flex flex-wrap'>
               {
-                authorDetails.map((detail, idx) =>
-                  detail.isLink ? <Link key={idx} href={detail.url || '#'}>
+                authorDetails.map((detail, index) =>
+                  detail.isLink ? <Link key={index} href={detail.url || '#'}>
                     <Content
                       className='px-3 py-1 text-muted'
                       content={detail.data}
@@ -85,7 +85,7 @@ const Author: NextPage = () => {
                   </Link>
                     :
                     <Content
-                      key={idx}
+                      key={index}
                       className='px-3 py-1 text-muted'
                       content={detail.data}
                       icon={<div className='text-xl'>{detail.icon}</div>} withIcon />

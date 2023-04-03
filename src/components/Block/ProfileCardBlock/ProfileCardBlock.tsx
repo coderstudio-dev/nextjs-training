@@ -64,8 +64,8 @@ const ProfileCardBlock: React.FC<IProfileCardBlock> = ({ name, about }) => {
         </div>
         <ul>
           {
-            metaData.map((data, idx) => (
-              <li className="pt-3" key={idx}>
+            metaData.map((data, index) => (
+              <li className="pt-3" key={index}>
                 <small className="font-bold text-uppercase text-muted">
                   {data.name.toUpperCase()}
                 </small>
