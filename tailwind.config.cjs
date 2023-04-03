@@ -45,7 +45,9 @@ module.exports = {
         'auto650/273': 'auto 650 / 273',
       },
       maxWidth: {
+        992: '992px',
         675: '675px',
+        360: '360px',
       },
       fontSize: {
         '1.5rem': '1.5rem',

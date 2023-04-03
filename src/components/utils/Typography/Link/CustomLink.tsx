@@ -5,16 +5,12 @@ export interface ICustomLink {
   url: string;
   content: ReactNode;
   className?: string;
+  titleLink?: boolean;
 }
 
-const CustomLink = ({ url, content, className }: ICustomLink) => {
+const CustomLink: React.FC<ICustomLink> = ({ url, content, className, titleLink }) => {
   return (
-    <Link
-      className={`hover:text-indigo-950 text-indigo-600 ${className || ''}`}
-      href={url}
-    >
-      {content}
-    </Link>
+    <Link className={`text-indigo-600 ${titleLink && 'hover:underline' || ''} ${titleLink && 'hover:text-indigo-950' || ''} ${className || ''}`} href={url}>{content}</Link>
   );
 };
 

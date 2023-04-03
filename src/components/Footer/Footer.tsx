@@ -78,13 +78,7 @@ const Footer = ({ footerContent }: IFooter) => {
       text-center text-sm text-slate-800"
     >
       <p>
-        <CustomLink
-          url="#"
-          className="font-semibold"
-          content="DEV Community "
-        />{' '}
-        — A constructive and inclusive social network for software developers.
-        With you every step of your journey.
+        <CustomLink url="#" className='font-semibold' content="DEV Community " titleLink /> — A constructive and inclusive social network for software developers. With you every step of your journey.
       </p>
       <ul className="mt-2 flex flex-wrap justify-center gap-2">
         {footerLinks.map((footerLink, idx) => {
