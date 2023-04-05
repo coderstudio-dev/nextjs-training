@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FaBirthdayCake, FaExternalLinkAlt, FaGithub, FaMapMarkerAlt } from "react-icons/fa";
 import Button from '../../components/Button/Button';
-import Content from '../../components/utils/Typography/Content/Content';
+import Content from '../../components/utils/Typography/Content';
 import PageTemplate from '../hoc/pageTemplate.page';
 
 
@@ -76,8 +76,8 @@ const Author: NextPage = () => {
             <p className='text-lg mb-4'>Top Rated Freelancer || Blogger || Cross-Platform App Developer || Web Developer || Open Source Contributor</p>
             <div className='flex flex-wrap'>
               {
-                authorDetails.map((detail, index) =>
-                  detail.isLink ? <Link key={index} href={detail.url || '#'}>
+                authorDetails.map((detail) =>
+                  detail.isLink ? <Link key={detail.data} href={detail.url || '#'}>
                     <Content
                       className='px-3 py-1 text-muted'
                       content={detail.data}
@@ -85,7 +85,7 @@ const Author: NextPage = () => {
                   </Link>
                     :
                     <Content
-                      key={index}
+                      key={detail.data}
                       className='px-3 py-1 text-muted'
                       content={detail.data}
                       icon={<div className='text-xl'>{detail.icon}</div>} withIcon />

@@ -1,7 +1,7 @@
 import { type IHeading } from './Heading';
 
 const base: IHeading = {
-  sampleTextProp: 'Hello World',
+  children: 'Hello World',
 };
 
 export const mockHeadingProps = {

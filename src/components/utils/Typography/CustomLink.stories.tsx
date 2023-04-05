@@ -3,7 +3,7 @@ import CustomLink, { type ICustomLink } from './CustomLink';
 import { mockCustomLinkProps } from './CustomLink.mock';
 
 export default {
-  title: 'Utils/Typography/CustomLink',
+  title: 'Components/Typography/CustomLink',
   component: CustomLink,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},

@@ -3,7 +3,7 @@ import Content, { type IContent } from './Content';
 import { mockContentProps } from './Content.mock';
 
 export default {
-  title: 'Utils/Typography/Content',
+  title: 'Components/Typography/Content',
   component: Content,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {

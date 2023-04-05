@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Button from '../../Button/Button';
-import CustomLink from '../../utils/Typography/Link/CustomLink';
+import CustomLink from '../../utils/Typography/CustomLink';
 
 export interface IProfileCardBlock {
   name: string;
@@ -71,8 +71,8 @@ const ProfileCardBlock = ({ name, about }: IProfileCardBlock) => {
           <p>{about}</p>
         </div>
         <ul>
-          {metaData.map((data, index) => (
-            <li className="pt-3" key={index}>
+          {metaData.map((data) => (
+            <li className="pt-3" key={data.value}>
               <small className="text-uppercase text-muted font-bold">
                 {data.name.toUpperCase()}
               </small>

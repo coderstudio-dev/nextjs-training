@@ -1,5 +1,5 @@
 import { type ReactNode } from 'react';
-import CustomLink from '../utils/Typography/Link/CustomLink';
+import CustomLink from '../utils/Typography/CustomLink';
 
 export interface IFooter {
   footerContent?: ReactNode;
