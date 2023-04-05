@@ -8,9 +8,16 @@ export interface ICustomLink {
   titleLink?: boolean;
 }
 
-const CustomLink: React.FC<ICustomLink> = ({ url, content, className, titleLink }) => {
+const CustomLink = ({ url, content, className, titleLink }: ICustomLink) => {
   return (
-    <Link className={`text-indigo-600 ${titleLink && 'hover:underline' || ''} ${titleLink && 'hover:text-indigo-950' || ''} ${className || ''}`} href={url}>{content}</Link>
+    <Link
+      className={`text-indigo-600 ${(titleLink && 'hover:underline') || ''} ${
+        (titleLink && 'hover:text-indigo-950') || ''
+      } ${className || ''}`}
+      href={url}
+    >
+      {content}
+    </Link>
   );
 };
 
